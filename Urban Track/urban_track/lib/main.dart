@@ -83,11 +83,11 @@ class _MyAppState extends State<MyApp> {
                   Row(
                     children: <Widget>[
                       Image.asset(
-                        "assets/logo.png",
+                        "assets/Recurso 1.png",
                         width: ScreenUtil.getInstance().setWidth(110),
                         height: ScreenUtil.getInstance().setHeight(110),
                       ),
-                      Text("LOGO",
+                      Text("Urban Tracker",
                           style: TextStyle(
                               fontFamily: "Poppins-Bold",
                               fontSize: ScreenUtil.getInstance().setSp(46),
@@ -198,14 +198,6 @@ class _MyAppState extends State<MyApp> {
                         iconData: CustomIcons.twitter,
                         onPressed: () {},
                       ),
-                      SocialIcon(
-                        colors: [
-                          Color(0xFF00c6fb),
-                          Color(0xFF005bea),
-                        ],
-                        iconData: CustomIcons.linkedin,
-                        onPressed: () {},
-                      )
                     ],
                   ),
                   SizedBox(
