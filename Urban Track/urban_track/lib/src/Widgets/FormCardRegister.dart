@@ -6,7 +6,7 @@ class FormCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Container(
       width: double.infinity,
-      height: ScreenUtil.getInstance().setHeight(500),
+      height: ScreenUtil.getInstance().setHeight(575),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8.0),
@@ -22,7 +22,7 @@ class FormCard extends StatelessWidget {
           ]),
       child: Padding(
         
-        padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0, bottom: 16.0),
+        padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

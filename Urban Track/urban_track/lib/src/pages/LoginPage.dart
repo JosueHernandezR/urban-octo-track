@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:urban_track/src/Widgets/FormCardLogin.dart';
+import 'package:urban_track/src/pages/ProfilePages.dart';
 import 'package:urban_track/src/pages/RegisterPage.dart';
 
 class LoginPage extends StatefulWidget {
@@ -131,7 +132,12 @@ class _MyAppState extends State<LoginPage> {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: ( context ) => ProfilePage() ),
+                                );
+                              },
                               child: Center(
                                 child: Text("Iniciar Sesión",
                                     style: TextStyle(

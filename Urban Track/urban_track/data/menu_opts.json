@@ -3,6 +3,9 @@
     "rutas" : [
         {
             "ruta"  : "register"
+        },
+        {
+            "ruta"  : "profile"
         }
     ]
 }
