@@ -38,4 +38,9 @@ Tercera fase
   Zonas concurridas de un dispositivo trackeado
 Cuarta fase
   Trackeo en tiempo real
+  
+**Descripcion de las carpetas**
+appFlask - Alberga nuestra pagina web, en ella se encuentran nuestras vistas, modelos y todo lo relacionado a nuestra pagina web en lenguaje Python.
+Urban Track/urban_track - Alberga nuestra app movil, en ella esta el codigo fuente en lenguaje Dart.
+ServiceMaps - Alberga el servicio de trackeo en tiempo real.
 
