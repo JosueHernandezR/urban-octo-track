@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:urban_track/src/Widgets/FormCardLogin.dart';
-import 'package:urban_track/src/pages/ProfilePages.dart';
+import 'package:urban_track/src/pages/HomePage.dart';
 import 'package:urban_track/src/pages/RegisterPage.dart';
 
 class LoginPage extends StatefulWidget {
@@ -135,7 +135,7 @@ class _MyAppState extends State<LoginPage> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: ( context ) => ProfilePage() ),
+                                  MaterialPageRoute(builder: ( context ) => HomePage() ),
                                 );
                               },
                               child: Center(

@@ -107,7 +107,12 @@ class _MyAppState extends State<RegisterPage> {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: ( context ) => RegisterPage() ),
+                                );
+                              },
                               child: Center(
                                 child: Text("Registrarse",
                                     style: TextStyle(

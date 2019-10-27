@@ -7,6 +7,6 @@ Map<String, WidgetBuilder> getApplicationRoutes(){
       return <String, WidgetBuilder> {
         '/'       : ( BuildContext context ) => LoginPage(),
         'register': ( BuildContext context ) => RegisterPage(),
-        'profile' : ( BuildContext context ) => ProfilePage(),
+        //'profile' : ( BuildContext context ) => ProfilePage(),
       };
 }

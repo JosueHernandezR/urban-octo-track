@@ -1,5 +1,5 @@
 {
-    "nombreApp" : "Componentes",
+    "nombreApp" : "urban_track",
     "rutas" : [
         {
             "ruta"  : "register"
