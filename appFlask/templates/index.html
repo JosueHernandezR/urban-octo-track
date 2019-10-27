@@ -1,0 +1,85 @@
+{% extends "base_template.html" %}
+{% block title %}Tracking {% endblock %}
+{% block content %}
+<div class="carousel carousel-slider center">
+    <div class="carousel-item white-text" href="#one!">
+        <img src="{{ url_for('static', filename='images/bg3.jpg') }}" alt="Carousel">
+        <h1>¿Que es Urban Tracker?</h1>
+        <h4>Urban tracker es una aplicacion de rastreo en tiempo real, en colaboración con Aruba, Urban tracker es capaz de hacer seguimiento de un objeto, animal o incluso una persona, proporcionando unicamente el identificador unico del dispositivo.</h4>
+    </div>
+    <div class="carousel-item white-text" href="#two!">
+        <img src="{{ url_for('static', filename='images/b5.jpg') }}" alt="Carousel">
+        <h1>Donde puedo utilizar Urban Tracker</h1>
+        <h4>Por el momento solo tenemos cobertura en las alcaldías Coyoacan, Tlalpan, Alvaro Obregón y Cuahutémoc de la CDMX, pero estamos trabajando para ampliar nuestra cobertura a más delegaciones y posteriormente a más estados.</h4>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m6">
+            <h3 class="center">¿Como usar Urban Tracker?</h3>
+            <p>Por el momento contamos con dos caracteristicas completamente gratuitas en nuestra beta del sitema.</p>
+            <ol>
+                <li>
+                    <p><b>Localización en tiempo real</b>, gracias a esta funcionalidad, el usuario puede moitorear en
+                        tiempo
+                        real la ubicación del dispositivo, con lo cual puede ver hacia dónde se dirige, el traslado y el
+                        tiempo
+                        que le está tomando llegar a él.</p>
+                <li>
+                    <p><b>Resumen de localización semanal</b>, nosotros sabemos que no todo el tiempo necesitas saber
+                        dónde está
+                        tu emisor, pero si quieres tener una idea de dónde es que estuvo la mayoría del tiempo, para
+                        ello
+                        generamos esta funcionalidad, con ella podrás tener un resumen con los lugares más concurridos.
+                    </p>
+            </ol>
+        </div>
+        <div class="col s12 m6" style="height: auto;">
+            <img src="{{ url_for('static', filename='images/bg10.jpg') }}" class="image1 right" alt="Carousel" style="margin: auto;">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6">
+            <img src="{{ url_for('static', filename='images/bg11.png') }}" class="image2" alt="Carousel">
+        </div>
+        <div class="col s12 m6">
+            <h3 class="center">¿Urban tracker es para mi?</h3>
+            <p>Existen muchas aplicaciones para urban tracker, tal vez alguna de ellas sea aplicable contigo, aquí te
+                dejamos
+                algunas de las más utilizadas por nuestros usuarios actuales</p>
+            <ol>
+                <li>
+                    <p><b>Seguimiento de autos</b> ¿Eres dueño de un taxi y quieres sacarle el máximo provecho? Urban
+                        tracker es
+                        para ti, gracias al seguimiento diario, podemos hacer un historial del camino recorrido del
+                        auto, de
+                        esta manera, podrás saber si se está ocupando el tiempo eficientemente o se necesitan realizar
+                        algunos
+                        ajustes en la forma de trabajo.</p>
+                <li>
+                    <p><b>Localización de personas vulnerables</b> Muchas veces los adultos mayores necesitan atención
+                        especial
+                        al salir, sin embargo necesitan sentirse independientes, con Urban tracker puedes encontrar el
+                        equilibrio, al ser compacto, la persona olvidara que tiene este dispositivo, pero tu podras
+                        saber donde
+                        está a solo 6 clicks de distancia.
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+    $(document).ready(function () {
+        $('.carousel').carousel({
+            full_width: true
+        });
+        $('.carousel').carousel();
+        setInterval(function() {
+            $('.carousel').carousel('next');
+        }, 8000);
+    });
+</script>
+{% endblock %}

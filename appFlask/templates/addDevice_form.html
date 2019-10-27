@@ -1,0 +1,76 @@
+{% extends "base_template.html" %}
+{% block title %}Registro de dispositivo a seguir{% endblock %}
+{% block content %}
+
+<div class="row">
+        <div class="col s10 offset-s1">
+            <h3 class="center">Mis datos</h3>
+            <h5>Nombre: {{ current_user.name }}</h5>
+            <h5>Correo: {{ current_user.email }}</h5>
+        </div>
+        <div class="col s10 offset-s1">
+            <h3 class="center">Gestion de dispositivos sincronizados</h3>
+        </div>
+        <div class="col s5 offset-s1 login2">
+            <h4 class="center">Agregar nuevo dispositivo</h4>
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <div class="row">
+                    <div class="input-field col s12">
+                        {{ form.name.label }}
+                        {{ form.name(size=64) }}<br>
+                        {% for error in form.name.errors %}
+                        <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        {{ form.tipodispositivo }}<br>
+                        {% for error in form.tipodispositivo.errors %}
+                        <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        {{ form.macaddress.label }}
+                        {{ form.macaddress(class_='selectClass') }}<br>
+                        {% for error in form.macaddress.errors %}
+                        <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="center" style="margin-bottom: 15px;">
+                    <a class="waves-effect waves-light btn">{{ form.submit() }}</a>
+                </div>
+            </form>
+        </div>
+        <div class="col s4 offset-s1">
+            <h4 class="center">Lista de dispositivos</h4>
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo dispositivo</th>
+                        <th>MAC ADDRESS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in devices %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.tipodispositivo }}</td>
+                        <td>{{ item.macaddress }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col s10 offset-s1">
+            <h3 class="center">Funcionalidad desarrollada</h3>
+            <h5><a href="{{ url_for('tracking_realtime') }}">Trackeo en tiempo real</a></h5>
+            <h5><a href="{{ url_for('tracking_dispositives') }}">Muestreo general</a></h5>
+        </div>
+</div>
+{% endblock %}

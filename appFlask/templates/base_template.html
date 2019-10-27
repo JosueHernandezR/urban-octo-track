@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>{% block title %}{% endblock %}</title>
+      
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+    <body>
+        <nav class="blue darken-4" role="navigation">
+            <div class="nav-wrapper container" styles="text-aling: center;">
+                <img src="{{ url_for('static', filename='images/logoF.png') }}" alt="Logo Producto" style="height: 30px; margin: 20px;">
+                <a href="{{ url_for('index') }}" class="brand-logo" id="logo-container" >Urban Tracker</a>
+                <ul class="right hide-on-med-and-down">
+                    {% if current_user.is_anonymous %}
+                        <li><a href="{{ url_for('login') }}">Iniciar Sesion</a></li>
+                        <li> | </li>
+                        <li><a href="{{ url_for('show_signup_form') }}">Registrar</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('tracking_realtime') }}">Trackeo live</a></li>
+                        <li><a href="{{ url_for('tracking_dispositives') }}">Muestreo general</a></li>
+                        <li><a href="{{ url_for('addDevice') }}">Dashboard</a></li>
+                        <li> | </li>
+                        <li><a href="{{ url_for('logout') }}">Cerrar Sesion</a></li>
+                    {% endif %}
+                </ul>
+                <ul id="nav-mobile" class="sidenav">
+                    {% if current_user.is_anonymous %}
+                        <li><a href="{{ url_for('login') }}">Iniciar Sesion</a></li>
+                        <li> | </li>
+                        <li><a href="{{ url_for('show_signup_form') }}">Registrar</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('tracking_realtime') }}">Trackeo live</a></li>
+                        <li><a href="{{ url_for('tracking_dispositives') }}">Muestreo general</a></li>
+                        <li><a href="{{ url_for('addDevice') }}">Dashboard</a></li>
+                        <li> | </li>
+                        <li><a href="{{ url_for('logout') }}">Cerrar Sesion</a></li>
+                    {% endif %}
+                </ul> 
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+        {% block content %}{% endblock %}  
+        <footer class="page-footer blue darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Urban Tracker</h5>
+                        <p class="grey-text text-lighten-4">Realiza un seguimiento de algun objeto, persona o animal.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Politica de privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <div class="container ">
+                © 2019 Copyright print('Hello World!')
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+            });
+        </script>
+        {% block javascript %}{% endblock %}
+
+    </body>
+</html>

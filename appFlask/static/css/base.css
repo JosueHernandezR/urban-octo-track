@@ -1,0 +1,57 @@
+html,body,#page, header { 
+    height:100%!important;
+}
+
+h1,h2{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.responseDIV{
+    padding-left: 200px;
+}
+
+.navbar{
+    color: red!important;
+}
+
+.brand-logo{
+    margin-left: 80px!important;
+}
+
+.logo{
+    width: 40%;
+    height: auto;
+}
+
+.footer-widgets {
+    height:0px!important;
+}
+
+#page-content {
+    flex: 1 0 auto;
+    margin-bottom: 200px;
+}
+
+#tipoDispositivo{
+    display: inline;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+.owo {
+    margin: 60px 20px!important;
+    color: red!important;
+    background: green!important;
+}
