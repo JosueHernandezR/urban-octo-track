@@ -1,0 +1,8 @@
+{
+    "nombreApp" : "Componentes",
+    "rutas" : [
+        {
+            "ruta"  : "register"
+        }
+    ]
+}

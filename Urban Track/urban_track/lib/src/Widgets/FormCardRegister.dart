@@ -21,11 +21,12 @@ class FormCard extends StatelessWidget {
                 blurRadius: 10.0),
           ]),
       child: Padding(
-        padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
+        
+        padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0, bottom: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text("Login",
+            Text("Registrarse",
                 style: TextStyle(
                     fontSize: ScreenUtil.getInstance().setSp(45),
                     fontFamily: "Poppins-Bold",
@@ -33,43 +34,44 @@ class FormCard extends StatelessWidget {
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
-            Text("Username",
+            Text("Nombre",
                 style: TextStyle(
                     fontFamily: "Poppins-Medium",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
               decoration: InputDecoration(
-                  hintText: "username",
+                  hintText: "Nombre",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
-            Text("PassWord",
+            Text("Correo electrónico",
+                style: TextStyle(
+                    fontFamily: "Poppins-Medium",
+                    fontSize: ScreenUtil.getInstance().setSp(26))),
+            TextField(
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                  hintText: "Correo electrónico",
+                  hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
+            ),
+            SizedBox(
+              height: ScreenUtil.getInstance().setHeight(30),
+            ),
+            Text("Contraseña",
                 style: TextStyle(
                     fontFamily: "Poppins-Medium",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
-                  hintText: "Password",
+                  hintText: "Contraseña",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
             ),
             SizedBox(
-              height: ScreenUtil.getInstance().setHeight(35),
+              height: ScreenUtil.getInstance().setHeight(30),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontFamily: "Poppins-Medium",
-                      fontSize: ScreenUtil.getInstance().setSp(28)),
-                )
-              ],
-            )
           ],
         ),
       ),
