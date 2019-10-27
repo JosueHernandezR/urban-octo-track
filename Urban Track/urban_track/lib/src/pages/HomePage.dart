@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:urban_track/src/Widgets/HomeInfo.dart';
+
 
 class HomePage extends StatelessWidget{
-
-  static final String routeName = 'home';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //backgroundColor: Colors.transparent,
+      //backgroundImage: ,
       appBar: AppBar(
         title: Text("Inicio"),
       ),
       drawer: _crearMenu(),
       body: ListView(
+        // Center(
+        //   child: new Image.asset(
+        //       'assets/images.jpg',
+        //       fit: BoxFit.fill,
+        //     ),
+        // ),
         //Cambiar de ser necesario los ajustes
         padding: EdgeInsets.all(10.0),
         children: <Widget>[
@@ -150,14 +156,47 @@ Localización de personas vulnerables Muchas veces los adultos mayores necesitan
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
-            child: Container(),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/image_02.png'),
+          UserAccountsDrawerHeader(
+            accountName: Text('Usuario',
+              style: TextStyle(
+                fontSize: ScreenUtil.getInstance().setSp(45),
+                fontFamily: "Poppins-Bold",
+                letterSpacing: .6,
+                color     : Colors.black
+              )
+            ),
+            accountEmail: Text('example@mail.com',
+              style: TextStyle(
+                fontFamily: "Poppins-Medium",
+                fontSize  : ScreenUtil.getInstance().setSp(30),
+                color     : Colors.black
+                )
+            ),
+            currentAccountPicture: CircleAvatar(
+              backgroundColor: Colors.blue,
+              child: Text('U',
+                style: TextStyle(
+                fontSize: ScreenUtil.getInstance().setSp(70),
+                fontFamily: "Poppins-Bold",
+                letterSpacing: .6,
+                color: Colors.white
+                )
               ),
             ),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/image_02.png')
+              )
+            ),
           ),
+          // DrawerHeader(
+          //   child: Container(),
+          //   decoration: BoxDecoration(
+          //     image: DecorationImage(
+          //       image: AssetImage('assets/image_02.png'),
+          //     ),
+          //   ),
+          // ),
           ListTile(
             leading: Icon(Icons.person, color: Colors.blue,),
             title: Text('Perfil',
