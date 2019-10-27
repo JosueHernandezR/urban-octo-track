@@ -1,0 +1,89 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+h1,h2 ,h3, h4{
+  font-family: 'Roboto', sans-serif;
+}
+
+.titleLogin{
+  background-color: #bbdefb;
+}
+
+.login{
+    border: 10px solid #1e88e5;
+    margin-left: 250px;
+    margin-top: 60px;
+    margin-right: 250px;
+    border-radius: 10px;
+}
+
+.login2{
+  border: 10px solid #1e88e5;
+  border-radius: 10px;
+}
+
+.logouwu{
+  position: relative!important;
+  top: 12px!important;
+  width: 60px!important;
+  height: auto!important;
+  margin-right: 5px!important;
+}
+
+select{
+  display: inline;
+}
+
+.image2{
+  width: 90%;
+  height: auto;
+}
+
+.image1{
+  width: 105%;
+  height: auto;
+}
+
+.carousel img{
+  position: relative!important;
+  max-width:100% auto!important;
+  height:auto!important;
+  filter: brightness(40%) saturate(140%)!important;
+}
+
+.carousel-item{
+  width: 100%!important;
+}
+
+.carousel h1, .carousel h4{
+  position: absolute!important;
+}
+
+.carousel h1{
+  width: 100%!important;
+  top: 15px!important;
+  text-align: center;;
+}
+
+.carousel h4{
+  width: 100%!important;
+  top: 115px!important;
+  text-align: center!important;
+  padding-left: 12%!important;
+  padding-right: 12%!important;
+}
+
+input[type="button"], a{
+    outline:none;
+}
